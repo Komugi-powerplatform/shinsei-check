@@ -1,0 +1,11 @@
+{
+  "org_url": "<Dataverse の URL。例: https://orgXXXXXXXX.crm7.dynamics.com>",
+  "tenant_id": "<Entra ID のテナント ID>",
+  "environment_id": "<Power Platform の環境 ID>",
+  "connection_reference": "<Dataverse コネクタの接続参照の論理名>",
+  "prompt_id_v1": "<AI Builder プロンプト Shinsei Extract の ID>",
+  "prompt_id_v2": "<AI Builder プロンプト Shinsei Extract v2 の ID>",
+  "flow_id_v1_http": "<フロー Shinsei Check HTTP の ID>",
+  "flow_id_v2_http": "<フロー Shinsei Check v2 HTTP の ID>",
+  "private_words": []
+}

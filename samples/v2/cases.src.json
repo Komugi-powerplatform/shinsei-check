@@ -1,0 +1,1685 @@
+[
+ {
+  "id": "V01",
+  "format": "hw-scan",
+  "intended": [],
+  "app": {
+   "type": "keihi",
+   "applicant": "佐藤 健二",
+   "department": "営業一課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-10",
+   "items": [
+    {
+     "name": "取引先との会食（和食店）",
+     "category": "会議費",
+     "amount": 31600,
+     "note": ""
+    }
+   ],
+   "amount": 31600,
+   "purpose": "年間契約の更新について取引先 2 社と打合せ",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [
+    "領収書"
+   ],
+   "pay_date": "2026-11-06",
+   "participants": 4,
+   "external_participants": true
+  }
+ },
+ {
+  "id": "V02",
+  "format": "pdf2",
+  "intended": [],
+  "app": {
+   "type": "keihi",
+   "applicant": "伊藤 美咲",
+   "department": "総務課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-12",
+   "items": [
+    {
+     "name": "地下鉄（本社〜東和商事 往復）",
+     "category": "交通費",
+     "amount": 420,
+     "note": ""
+    },
+    {
+     "name": "コピー用紙 A4 5 箱",
+     "category": "消耗品費",
+     "amount": 3850,
+     "note": ""
+    },
+    {
+     "name": "宅配便（見本品の発送）",
+     "category": "通信費",
+     "amount": 1280,
+     "note": ""
+    },
+    {
+     "name": "バス（倉庫〜駅）",
+     "category": "交通費",
+     "amount": 230,
+     "note": ""
+    },
+    {
+     "name": "付せん・クリップ",
+     "category": "消耗品費",
+     "amount": 1640,
+     "note": ""
+    },
+    {
+     "name": "書留（契約書 2 通）",
+     "category": "通信費",
+     "amount": 1240,
+     "note": ""
+    },
+    {
+     "name": "JR（本社〜川崎工場 往復）",
+     "category": "交通費",
+     "amount": 640,
+     "note": ""
+    },
+    {
+     "name": "書籍「販売実務の手引き」",
+     "category": "図書費",
+     "amount": 2420,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（本社〜北斗物産 往復）",
+     "category": "交通費",
+     "amount": 480,
+     "note": ""
+    },
+    {
+     "name": "封筒 角 2 100 枚",
+     "category": "消耗品費",
+     "amount": 990,
+     "note": ""
+    },
+    {
+     "name": "レターパック 4 通",
+     "category": "通信費",
+     "amount": 2400,
+     "note": ""
+    },
+    {
+     "name": "私鉄（本社〜西部倉庫 往復）",
+     "category": "交通費",
+     "amount": 760,
+     "note": ""
+    },
+    {
+     "name": "ホワイトボード用マーカー",
+     "category": "消耗品費",
+     "amount": 1320,
+     "note": ""
+    },
+    {
+     "name": "バス（展示会場〜駅）",
+     "category": "交通費",
+     "amount": 260,
+     "note": ""
+    },
+    {
+     "name": "業界紙 11 月分",
+     "category": "図書費",
+     "amount": 3300,
+     "note": ""
+    },
+    {
+     "name": "宅配便（カタログの発送）",
+     "category": "通信費",
+     "amount": 1860,
+     "note": ""
+    },
+    {
+     "name": "タクシー（本社〜倉庫）",
+     "category": "交通費",
+     "amount": 5000,
+     "note": ""
+    },
+    {
+     "name": "タクシー（駅〜商工会館）",
+     "category": "交通費",
+     "amount": 7200,
+     "note": "大型の展示パネルを運ぶため"
+    }
+   ],
+   "amount": 35290,
+   "purpose": "10 月分の立替経費の精算",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [
+    "領収書"
+   ],
+   "pay_date": "2026-10-30",
+   "participants": null,
+   "external_participants": null
+  }
+ },
+ {
+  "id": "V03",
+  "format": "hw-scan",
+  "intended": [],
+  "app": {
+   "type": "shucchou",
+   "applicant": "木村 卓郎",
+   "department": "商品企画課",
+   "applicant_class": "管理職",
+   "apply_date": "2026-11-02",
+   "items": [
+    {
+     "name": "新幹線（東京〜名古屋 往復）",
+     "category": "交通費",
+     "amount": 22000,
+     "note": ""
+    },
+    {
+     "name": "ホテル 2 泊",
+     "category": "宿泊費",
+     "amount": 36000,
+     "note": ""
+    }
+   ],
+   "amount": 58000,
+   "purpose": "協力工場 2 社での試作品の確認",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [],
+   "destination": "名古屋市",
+   "depart_date": "2026-11-16",
+   "return_date": "2026-11-18",
+   "nights": 2
+  }
+ },
+ {
+  "id": "V04",
+  "format": "scan2",
+  "intended": [],
+  "app": {
+   "type": "ringi",
+   "applicant": "高橋 誠",
+   "department": "情報システム課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-05",
+   "items": [
+    {
+     "name": "ノート PC（営業一課）",
+     "category": "備品",
+     "amount": 148000,
+     "note": ""
+    },
+    {
+     "name": "ノート PC（営業二課）",
+     "category": "備品",
+     "amount": 148000,
+     "note": ""
+    },
+    {
+     "name": "27 型モニター",
+     "category": "備品",
+     "amount": 32000,
+     "note": ""
+    },
+    {
+     "name": "ドッキングステーション",
+     "category": "備品",
+     "amount": 18500,
+     "note": ""
+    },
+    {
+     "name": "無線キーボード・マウス",
+     "category": "備品",
+     "amount": 9800,
+     "note": ""
+    },
+    {
+     "name": "Web 会議用カメラ",
+     "category": "備品",
+     "amount": 12400,
+     "note": ""
+    },
+    {
+     "name": "会議用スピーカーフォン",
+     "category": "備品",
+     "amount": 38000,
+     "note": ""
+    },
+    {
+     "name": "複合機用トナー一式",
+     "category": "備品",
+     "amount": 46000,
+     "note": ""
+    },
+    {
+     "name": "表計算ソフト 追加ライセンス",
+     "category": "ソフトウェア",
+     "amount": 54000,
+     "note": ""
+    },
+    {
+     "name": "ウイルス対策ソフト 年間更新",
+     "category": "ソフトウェア",
+     "amount": 39600,
+     "note": ""
+    },
+    {
+     "name": "無停電電源装置",
+     "category": "備品",
+     "amount": 42000,
+     "note": ""
+    },
+    {
+     "name": "ネットワークスイッチ",
+     "category": "備品",
+     "amount": 27500,
+     "note": ""
+    },
+    {
+     "name": "外付けハードディスク",
+     "category": "備品",
+     "amount": 16800,
+     "note": ""
+    },
+    {
+     "name": "シュレッダー",
+     "category": "備品",
+     "amount": 58000,
+     "note": ""
+    },
+    {
+     "name": "書類保管庫",
+     "category": "備品",
+     "amount": 74000,
+     "note": ""
+    },
+    {
+     "name": "設置・初期設定の作業費",
+     "category": "業務委託",
+     "amount": 66000,
+     "note": ""
+    }
+   ],
+   "amount": 830600,
+   "purpose": "本社 2 階の執務室の機器の入れ替え",
+   "approver_name": "松本 隆之",
+   "approver_position": "役員",
+   "attachments": [
+    "見積書"
+   ],
+   "subject": "本社 2 階の機器の入れ替え",
+   "quotes_count": 2
+  }
+ },
+ {
+  "id": "V05",
+  "format": "hw-scan",
+  "intended": [
+   "R1"
+  ],
+  "app": {
+   "type": "shucchou",
+   "applicant": "鈴木 彩",
+   "department": "営業二課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-04",
+   "items": [
+    {
+     "name": "新幹線（東京〜新大阪 往復）",
+     "category": "交通費",
+     "amount": 28000,
+     "note": ""
+    },
+    {
+     "name": "ホテル 1 泊",
+     "category": "宿泊費",
+     "amount": 14000,
+     "note": ""
+    }
+   ],
+   "amount": 42000,
+   "purpose": "堺市の販売代理店との年間契約の更新交渉",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [],
+   "destination": "大阪府堺市",
+   "depart_date": "2026-11-17",
+   "return_date": "2026-11-18",
+   "nights": 1
+  }
+ },
+ {
+  "id": "V06",
+  "format": "hw-scan",
+  "intended": [
+   "R1"
+  ],
+  "app": {
+   "type": "shucchou",
+   "applicant": "吉田 大輔",
+   "department": "営業二課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-05",
+   "items": [
+    {
+     "name": "特急（往復）",
+     "category": "交通費",
+     "amount": 6400,
+     "note": ""
+    },
+    {
+     "name": "ホテル 2 泊",
+     "category": "宿泊費",
+     "amount": 27000,
+     "note": ""
+    }
+   ],
+   "amount": 33400,
+   "purpose": "八王子の物流拠点の立ち上げ支援",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [],
+   "destination": "東京都八王子市",
+   "depart_date": "2026-11-18",
+   "return_date": "2026-11-20",
+   "nights": 2
+  }
+ },
+ {
+  "id": "V07",
+  "format": "hw-photo",
+  "intended": [
+   "R1"
+  ],
+  "app": {
+   "type": "keihi",
+   "applicant": "加藤 翔",
+   "department": "営業一課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-11",
+   "items": [
+    {
+     "name": "取引先との会食（中華料理店）",
+     "category": "会議費",
+     "amount": 41000,
+     "note": ""
+    }
+   ],
+   "amount": 41000,
+   "purpose": "主要取引先との来期の取引条件の打合せ",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [
+    "領収書"
+   ],
+   "pay_date": "2026-11-09",
+   "participants": 5,
+   "external_participants": true
+  }
+ },
+ {
+  "id": "V08",
+  "format": "pdf2",
+  "intended": [
+   "R7"
+  ],
+  "app": {
+   "type": "keihi",
+   "applicant": "清水 優",
+   "department": "総務課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-13",
+   "items": [
+    {
+     "name": "宅配便（見本品の発送）",
+     "category": "通信費",
+     "amount": 1280,
+     "note": ""
+    },
+    {
+     "name": "バス（倉庫〜駅）",
+     "category": "交通費",
+     "amount": 230,
+     "note": ""
+    },
+    {
+     "name": "付せん・クリップ",
+     "category": "消耗品費",
+     "amount": 1640,
+     "note": ""
+    },
+    {
+     "name": "書留（契約書 2 通）",
+     "category": "通信費",
+     "amount": 1240,
+     "note": ""
+    },
+    {
+     "name": "JR（本社〜川崎工場 往復）",
+     "category": "交通費",
+     "amount": 640,
+     "note": ""
+    },
+    {
+     "name": "書籍「販売実務の手引き」",
+     "category": "図書費",
+     "amount": 2420,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（本社〜北斗物産 往復）",
+     "category": "交通費",
+     "amount": 480,
+     "note": ""
+    },
+    {
+     "name": "封筒 角 2 100 枚",
+     "category": "消耗品費",
+     "amount": 990,
+     "note": ""
+    },
+    {
+     "name": "レターパック 4 通",
+     "category": "通信費",
+     "amount": 2400,
+     "note": ""
+    },
+    {
+     "name": "私鉄（本社〜西部倉庫 往復）",
+     "category": "交通費",
+     "amount": 760,
+     "note": ""
+    },
+    {
+     "name": "ホワイトボード用マーカー",
+     "category": "消耗品費",
+     "amount": 1320,
+     "note": ""
+    },
+    {
+     "name": "バス（展示会場〜駅）",
+     "category": "交通費",
+     "amount": 260,
+     "note": ""
+    },
+    {
+     "name": "業界紙 11 月分",
+     "category": "図書費",
+     "amount": 3300,
+     "note": ""
+    },
+    {
+     "name": "宅配便（カタログの発送）",
+     "category": "通信費",
+     "amount": 1860,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（本社〜商工会館 往復）",
+     "category": "交通費",
+     "amount": 360,
+     "note": ""
+    },
+    {
+     "name": "クリアホルダー 50 枚",
+     "category": "消耗品費",
+     "amount": 1100,
+     "note": ""
+    },
+    {
+     "name": "JR（本社〜大宮営業所 往復）",
+     "category": "交通費",
+     "amount": 1140,
+     "note": ""
+    },
+    {
+     "name": "速達郵便 3 通",
+     "category": "通信費",
+     "amount": 1050,
+     "note": ""
+    },
+    {
+     "name": "タクシー（本社〜西部倉庫）",
+     "category": "交通費",
+     "amount": 6400,
+     "note": ""
+    },
+    {
+     "name": "タクシー（駅〜法務局）",
+     "category": "交通費",
+     "amount": 1800,
+     "note": ""
+    }
+   ],
+   "amount": 30670,
+   "purpose": "10 月後半から 11 月前半の立替経費の精算",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [
+    "領収書"
+   ],
+   "pay_date": "2026-10-28",
+   "participants": null,
+   "external_participants": null
+  }
+ },
+ {
+  "id": "V09",
+  "format": "hw-scan",
+  "intended": [
+   "R8"
+  ],
+  "app": {
+   "type": "ringi",
+   "applicant": "藤井 聡史",
+   "department": "情報システム課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-10",
+   "items": [
+    {
+     "name": "受発注管理ソフトウェア（年間ライセンス）",
+     "category": "ソフトウェア",
+     "amount": 1170000,
+     "note": ""
+    },
+    {
+     "name": "初期設定の作業費",
+     "category": "業務委託",
+     "amount": 280000,
+     "note": ""
+    }
+   ],
+   "amount": 1450000,
+   "purpose": "手作業の受発注処理をなくし入力ミスを減らす",
+   "approver_name": "松本 隆之",
+   "approver_position": "役員",
+   "attachments": [
+    "見積書"
+   ],
+   "subject": "受発注管理ソフトウェアの導入",
+   "quotes_count": 1
+  }
+ },
+ {
+  "id": "V10",
+  "format": "pdf2",
+  "intended": [
+   "R6"
+  ],
+  "app": {
+   "type": "ringi",
+   "applicant": "橋本 哲也",
+   "department": "総務課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-06",
+   "items": [
+    {
+     "name": "27 型モニター",
+     "category": "備品",
+     "amount": 32000,
+     "note": ""
+    },
+    {
+     "name": "ドッキングステーション",
+     "category": "備品",
+     "amount": 18500,
+     "note": ""
+    },
+    {
+     "name": "無線キーボード・マウス",
+     "category": "備品",
+     "amount": 9800,
+     "note": ""
+    },
+    {
+     "name": "Web 会議用カメラ",
+     "category": "備品",
+     "amount": 12400,
+     "note": ""
+    },
+    {
+     "name": "会議用スピーカーフォン",
+     "category": "備品",
+     "amount": 38000,
+     "note": ""
+    },
+    {
+     "name": "複合機用トナー一式",
+     "category": "備品",
+     "amount": 46000,
+     "note": ""
+    },
+    {
+     "name": "表計算ソフト 追加ライセンス",
+     "category": "ソフトウェア",
+     "amount": 54000,
+     "note": ""
+    },
+    {
+     "name": "ウイルス対策ソフト 年間更新",
+     "category": "ソフトウェア",
+     "amount": 39600,
+     "note": ""
+    },
+    {
+     "name": "無停電電源装置",
+     "category": "備品",
+     "amount": 42000,
+     "note": ""
+    },
+    {
+     "name": "ネットワークスイッチ",
+     "category": "備品",
+     "amount": 27500,
+     "note": ""
+    },
+    {
+     "name": "外付けハードディスク",
+     "category": "備品",
+     "amount": 16800,
+     "note": ""
+    },
+    {
+     "name": "シュレッダー",
+     "category": "備品",
+     "amount": 58000,
+     "note": ""
+    },
+    {
+     "name": "書類保管庫",
+     "category": "備品",
+     "amount": 74000,
+     "note": ""
+    },
+    {
+     "name": "設置・初期設定の作業費",
+     "category": "業務委託",
+     "amount": 66000,
+     "note": ""
+    },
+    {
+     "name": "プロジェクター",
+     "category": "備品",
+     "amount": 98000,
+     "note": ""
+    },
+    {
+     "name": "スクリーン",
+     "category": "備品",
+     "amount": 24000,
+     "note": ""
+    },
+    {
+     "name": "デスクトップ PC（経理課）",
+     "category": "備品",
+     "amount": 132000,
+     "note": ""
+    },
+    {
+     "name": "バックアップ用 NAS",
+     "category": "備品",
+     "amount": 86000,
+     "note": ""
+    }
+   ],
+   "amount": 871600,
+   "purpose": "支店 3 か所の事務機器の入れ替え",
+   "approver_name": "渡辺 修",
+   "approver_position": "部長",
+   "attachments": [
+    "見積書"
+   ],
+   "subject": "支店の事務機器の入れ替え",
+   "quotes_count": 1
+  }
+ },
+ {
+  "id": "V11",
+  "format": "scan2",
+  "intended": [
+   "R3"
+  ],
+  "app": {
+   "type": "shucchou",
+   "applicant": "小林 直子",
+   "department": "総務課",
+   "applicant_class": "管理職",
+   "apply_date": "2026-11-11",
+   "items": [
+    {
+     "name": "航空券（羽田〜福岡 往復）",
+     "category": "交通費",
+     "amount": 42000,
+     "note": ""
+    },
+    {
+     "name": "ホテル 4 泊",
+     "category": "宿泊費",
+     "amount": 60000,
+     "note": ""
+    },
+    {
+     "name": "在来線（支店〜工場 往復）",
+     "category": "交通費",
+     "amount": 2340,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（駅〜支店 往復）",
+     "category": "交通費",
+     "amount": 420,
+     "note": ""
+    },
+    {
+     "name": "バス（駅〜工場）",
+     "category": "交通費",
+     "amount": 380,
+     "note": ""
+    },
+    {
+     "name": "在来線（空港〜市内）",
+     "category": "交通費",
+     "amount": 520,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 1 日目）",
+     "category": "交通費",
+     "amount": 640,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 2 日目）",
+     "category": "交通費",
+     "amount": 580,
+     "note": ""
+    },
+    {
+     "name": "バス（工場〜駅）",
+     "category": "交通費",
+     "amount": 380,
+     "note": ""
+    },
+    {
+     "name": "在来線（市内〜空港）",
+     "category": "交通費",
+     "amount": 520,
+     "note": ""
+    },
+    {
+     "name": "私鉄（支店〜取引先 往復）",
+     "category": "交通費",
+     "amount": 860,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 3 日目）",
+     "category": "交通費",
+     "amount": 460,
+     "note": ""
+    },
+    {
+     "name": "バス（ホテル〜支店 往復）",
+     "category": "交通費",
+     "amount": 440,
+     "note": ""
+    },
+    {
+     "name": "在来線（取引先 2 社の訪問）",
+     "category": "交通費",
+     "amount": 1180,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 4 日目）",
+     "category": "交通費",
+     "amount": 500,
+     "note": ""
+    },
+    {
+     "name": "バス（会場〜駅）",
+     "category": "交通費",
+     "amount": 240,
+     "note": ""
+    }
+   ],
+   "amount": 111460,
+   "purpose": "九州支店の事務所移転の立ち会いと取引先への挨拶",
+   "approver_name": "渡辺 修",
+   "approver_position": "部長",
+   "attachments": [],
+   "destination": "福岡市",
+   "depart_date": "2026-11-16",
+   "return_date": "2026-11-20",
+   "nights": 4
+  }
+ },
+ {
+  "id": "V12",
+  "format": "hw-scan",
+  "intended": [
+   "R1"
+  ],
+  "app": {
+   "type": "keihi",
+   "applicant": "池田 茜",
+   "department": "営業一課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-10",
+   "items": [
+    {
+     "name": "課内の打合せ昼食（洋食店）",
+     "category": "会議費",
+     "amount": 16500,
+     "note": ""
+    }
+   ],
+   "amount": 16500,
+   "purpose": "来月の展示会の役割分担の打合せ",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [
+    "領収書"
+   ],
+   "pay_date": "2026-11-07",
+   "participants": 3,
+   "external_participants": false
+  }
+ },
+ {
+  "id": "V13",
+  "format": "pdf2",
+  "intended": [
+   "R1",
+   "R7",
+   "R7"
+  ],
+  "app": {
+   "type": "shucchou",
+   "applicant": "前田 光",
+   "department": "営業一課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-02",
+   "items": [
+    {
+     "name": "新幹線（東京〜新大阪 往復）",
+     "category": "交通費",
+     "amount": 28000,
+     "note": ""
+    },
+    {
+     "name": "ホテル 3 泊",
+     "category": "宿泊費",
+     "amount": 46500,
+     "note": ""
+    },
+    {
+     "name": "在来線（支店〜工場 往復）",
+     "category": "交通費",
+     "amount": 2340,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（駅〜支店 往復）",
+     "category": "交通費",
+     "amount": 420,
+     "note": ""
+    },
+    {
+     "name": "バス（駅〜工場）",
+     "category": "交通費",
+     "amount": 380,
+     "note": ""
+    },
+    {
+     "name": "在来線（空港〜市内）",
+     "category": "交通費",
+     "amount": 520,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 1 日目）",
+     "category": "交通費",
+     "amount": 640,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 2 日目）",
+     "category": "交通費",
+     "amount": 580,
+     "note": ""
+    },
+    {
+     "name": "バス（工場〜駅）",
+     "category": "交通費",
+     "amount": 380,
+     "note": ""
+    },
+    {
+     "name": "在来線（市内〜空港）",
+     "category": "交通費",
+     "amount": 520,
+     "note": ""
+    },
+    {
+     "name": "私鉄（支店〜取引先 往復）",
+     "category": "交通費",
+     "amount": 860,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 3 日目）",
+     "category": "交通費",
+     "amount": 460,
+     "note": ""
+    },
+    {
+     "name": "バス（ホテル〜支店 往復）",
+     "category": "交通費",
+     "amount": 440,
+     "note": ""
+    },
+    {
+     "name": "在来線（取引先 2 社の訪問）",
+     "category": "交通費",
+     "amount": 1180,
+     "note": ""
+    },
+    {
+     "name": "タクシー（新大阪駅〜展示会場）",
+     "category": "交通費",
+     "amount": 5800,
+     "note": ""
+    },
+    {
+     "name": "タクシー（会場〜ホテル）",
+     "category": "交通費",
+     "amount": 4200,
+     "note": ""
+    },
+    {
+     "name": "タクシー（ホテル〜取引先）",
+     "category": "交通費",
+     "amount": 9000,
+     "note": ""
+    },
+    {
+     "name": "タクシー（取引先〜新大阪駅）",
+     "category": "交通費",
+     "amount": 5600,
+     "note": "見本品の箱を運ぶため"
+    }
+   ],
+   "amount": 107820,
+   "purpose": "大阪での展示会への出展と取引先 3 社の訪問",
+   "approver_name": "渡辺 修",
+   "approver_position": "部長",
+   "attachments": [],
+   "destination": "大阪市",
+   "depart_date": "2026-11-17",
+   "return_date": "2026-11-20",
+   "nights": 3
+  }
+ },
+ {
+  "id": "V14",
+  "format": "hw-scan",
+  "intended": [
+   "R2",
+   "R8"
+  ],
+  "app": {
+   "type": "ringi",
+   "applicant": "山本 恵",
+   "department": "マーケティング課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-09",
+   "items": [
+    {
+     "name": "春の展示会 出展小間料",
+     "category": "広告",
+     "amount": 760000,
+     "note": ""
+    },
+    {
+     "name": "ブース施工費",
+     "category": "広告",
+     "amount": 320000,
+     "note": ""
+    }
+   ],
+   "amount": 1080000,
+   "purpose": "新製品の認知拡大と販売店の新規開拓",
+   "approver_name": "渡辺 修",
+   "approver_position": "部長",
+   "attachments": [
+    "見積書"
+   ],
+   "subject": "春の文具展示会への出展",
+   "quotes_count": 1
+  }
+ },
+ {
+  "id": "V15",
+  "format": "scan2",
+  "intended": [
+   "R4",
+   "R6",
+   "R7"
+  ],
+  "app": {
+   "type": "keihi",
+   "applicant": "阿部 圭",
+   "department": "営業二課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-12",
+   "items": [
+    {
+     "name": "地下鉄（本社〜東和商事 往復）",
+     "category": "交通費",
+     "amount": 420,
+     "note": ""
+    },
+    {
+     "name": "コピー用紙 A4 5 箱",
+     "category": "消耗品費",
+     "amount": 3850,
+     "note": ""
+    },
+    {
+     "name": "宅配便（見本品の発送）",
+     "category": "通信費",
+     "amount": 1280,
+     "note": ""
+    },
+    {
+     "name": "バス（倉庫〜駅）",
+     "category": "交通費",
+     "amount": 230,
+     "note": ""
+    },
+    {
+     "name": "付せん・クリップ",
+     "category": "消耗品費",
+     "amount": 1640,
+     "note": ""
+    },
+    {
+     "name": "書留（契約書 2 通）",
+     "category": "通信費",
+     "amount": 1240,
+     "note": ""
+    },
+    {
+     "name": "JR（本社〜川崎工場 往復）",
+     "category": "交通費",
+     "amount": 640,
+     "note": ""
+    },
+    {
+     "name": "書籍「販売実務の手引き」",
+     "category": "図書費",
+     "amount": 2420,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（本社〜北斗物産 往復）",
+     "category": "交通費",
+     "amount": 480,
+     "note": ""
+    },
+    {
+     "name": "封筒 角 2 100 枚",
+     "category": "消耗品費",
+     "amount": 990,
+     "note": ""
+    },
+    {
+     "name": "レターパック 4 通",
+     "category": "通信費",
+     "amount": 2400,
+     "note": ""
+    },
+    {
+     "name": "私鉄（本社〜西部倉庫 往復）",
+     "category": "交通費",
+     "amount": 760,
+     "note": ""
+    },
+    {
+     "name": "ホワイトボード用マーカー",
+     "category": "消耗品費",
+     "amount": 1320,
+     "note": ""
+    },
+    {
+     "name": "バス（展示会場〜駅）",
+     "category": "交通費",
+     "amount": 260,
+     "note": ""
+    },
+    {
+     "name": "業界紙 11 月分",
+     "category": "図書費",
+     "amount": 3300,
+     "note": ""
+    },
+    {
+     "name": "宅配便（カタログの発送）",
+     "category": "通信費",
+     "amount": 1860,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（本社〜商工会館 往復）",
+     "category": "交通費",
+     "amount": 360,
+     "note": ""
+    },
+    {
+     "name": "クリアホルダー 50 枚",
+     "category": "消耗品費",
+     "amount": 1100,
+     "note": ""
+    },
+    {
+     "name": "JR（本社〜大宮営業所 往復）",
+     "category": "交通費",
+     "amount": 1140,
+     "note": ""
+    },
+    {
+     "name": "速達郵便 3 通",
+     "category": "通信費",
+     "amount": 1050,
+     "note": ""
+    },
+    {
+     "name": "タクシー（本社〜川崎工場）",
+     "category": "交通費",
+     "amount": 12000,
+     "note": ""
+    }
+   ],
+   "amount": 37540,
+   "purpose": "10 月分の立替経費の精算",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [],
+   "pay_date": "2026-10-31",
+   "participants": null,
+   "external_participants": null
+  }
+ },
+ {
+  "id": "V16",
+  "format": "hw-photo",
+  "intended": [
+   "R1",
+   "R3"
+  ],
+  "app": {
+   "type": "shucchou",
+   "applicant": "石井 千秋",
+   "department": "マーケティング課",
+   "applicant_class": "管理職",
+   "apply_date": "2026-11-13",
+   "items": [
+    {
+     "name": "新幹線（新大阪〜東京 往復）",
+     "category": "交通費",
+     "amount": 28000,
+     "note": ""
+    },
+    {
+     "name": "ホテル 2 泊",
+     "category": "宿泊費",
+     "amount": 37000,
+     "note": ""
+    }
+   ],
+   "amount": 65000,
+   "purpose": "東京本社での来期の販促計画の会議",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [],
+   "destination": "東京都港区",
+   "depart_date": "2026-11-16",
+   "return_date": "2026-11-18",
+   "nights": 2
+  }
+ },
+ {
+  "id": "V17",
+  "format": "pdf2",
+  "intended": [
+   "R2",
+   "R4",
+   "R5"
+  ],
+  "app": {
+   "type": "ringi",
+   "applicant": "森 和也",
+   "department": "情報システム課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-10",
+   "items": [
+    {
+     "name": "ノート PC（営業一課）",
+     "category": "備品",
+     "amount": 148000,
+     "note": ""
+    },
+    {
+     "name": "ノート PC（営業二課）",
+     "category": "備品",
+     "amount": 148000,
+     "note": ""
+    },
+    {
+     "name": "27 型モニター",
+     "category": "備品",
+     "amount": 32000,
+     "note": ""
+    },
+    {
+     "name": "ドッキングステーション",
+     "category": "備品",
+     "amount": 18500,
+     "note": ""
+    },
+    {
+     "name": "無線キーボード・マウス",
+     "category": "備品",
+     "amount": 9800,
+     "note": ""
+    },
+    {
+     "name": "Web 会議用カメラ",
+     "category": "備品",
+     "amount": 12400,
+     "note": ""
+    },
+    {
+     "name": "会議用スピーカーフォン",
+     "category": "備品",
+     "amount": 38000,
+     "note": ""
+    },
+    {
+     "name": "複合機用トナー一式",
+     "category": "備品",
+     "amount": 46000,
+     "note": ""
+    },
+    {
+     "name": "表計算ソフト 追加ライセンス",
+     "category": "ソフトウェア",
+     "amount": 54000,
+     "note": ""
+    },
+    {
+     "name": "ウイルス対策ソフト 年間更新",
+     "category": "ソフトウェア",
+     "amount": 39600,
+     "note": ""
+    },
+    {
+     "name": "無停電電源装置",
+     "category": "備品",
+     "amount": 42000,
+     "note": ""
+    },
+    {
+     "name": "ネットワークスイッチ",
+     "category": "備品",
+     "amount": 27500,
+     "note": ""
+    },
+    {
+     "name": "外付けハードディスク",
+     "category": "備品",
+     "amount": 16800,
+     "note": ""
+    },
+    {
+     "name": "シュレッダー",
+     "category": "備品",
+     "amount": 58000,
+     "note": ""
+    },
+    {
+     "name": "書類保管庫",
+     "category": "備品",
+     "amount": 74000,
+     "note": ""
+    },
+    {
+     "name": "ノート PC（総務課）",
+     "category": "備品",
+     "amount": 148000,
+     "note": ""
+    },
+    {
+     "name": "プロジェクター",
+     "category": "備品",
+     "amount": 98000,
+     "note": ""
+    },
+    {
+     "name": "スクリーン",
+     "category": "備品",
+     "amount": 24000,
+     "note": ""
+    },
+    {
+     "name": "電話会議システム 年間利用料",
+     "category": "ソフトウェア",
+     "amount": 120000,
+     "note": ""
+    },
+    {
+     "name": "デスクトップ PC（経理課）",
+     "category": "備品",
+     "amount": 132000,
+     "note": ""
+    },
+    {
+     "name": "バックアップ用 NAS",
+     "category": "備品",
+     "amount": 86000,
+     "note": ""
+    },
+    {
+     "name": "サーバー室の空調機",
+     "category": "備品",
+     "amount": 940000,
+     "note": ""
+    }
+   ],
+   "amount": 2312600,
+   "purpose": "",
+   "approver_name": "渡辺 修",
+   "approver_position": "部長",
+   "attachments": [],
+   "subject": "本社の機器の一括更新",
+   "quotes_count": 0
+  }
+ },
+ {
+  "id": "V18",
+  "format": "hw-scan",
+  "intended": [
+   "R3",
+   "R5"
+  ],
+  "app": {
+   "type": "keihi",
+   "applicant": "石川 舞",
+   "department": "商品企画課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-12",
+   "items": [
+    {
+     "name": "デザイン事務所との会食（洋食店）",
+     "category": "会議費",
+     "amount": 24000,
+     "note": ""
+    }
+   ],
+   "amount": 24000,
+   "purpose": "新シリーズのデザインの打合せ",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [
+    "領収書"
+   ],
+   "pay_date": "2026-10-03",
+   "participants": null,
+   "external_participants": true
+  }
+ },
+ {
+  "id": "V19",
+  "format": "scan2",
+  "intended": [
+   "R2",
+   "R6",
+   "R7"
+  ],
+  "app": {
+   "type": "shucchou",
+   "applicant": "佐々木 亮",
+   "department": "営業二課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-04",
+   "items": [
+    {
+     "name": "新幹線（東京〜名古屋 往復）",
+     "category": "交通費",
+     "amount": 22000,
+     "note": ""
+    },
+    {
+     "name": "ホテル 2 泊",
+     "category": "宿泊費",
+     "amount": 30000,
+     "note": ""
+    },
+    {
+     "name": "レンタカー 3 日間",
+     "category": "交通費",
+     "amount": 39600,
+     "note": ""
+    },
+    {
+     "name": "在来線（支店〜工場 往復）",
+     "category": "交通費",
+     "amount": 2340,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（駅〜支店 往復）",
+     "category": "交通費",
+     "amount": 420,
+     "note": ""
+    },
+    {
+     "name": "バス（駅〜工場）",
+     "category": "交通費",
+     "amount": 380,
+     "note": ""
+    },
+    {
+     "name": "在来線（空港〜市内）",
+     "category": "交通費",
+     "amount": 520,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 1 日目）",
+     "category": "交通費",
+     "amount": 640,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 2 日目）",
+     "category": "交通費",
+     "amount": 580,
+     "note": ""
+    },
+    {
+     "name": "バス（工場〜駅）",
+     "category": "交通費",
+     "amount": 380,
+     "note": ""
+    },
+    {
+     "name": "在来線（市内〜空港）",
+     "category": "交通費",
+     "amount": 520,
+     "note": ""
+    },
+    {
+     "name": "私鉄（支店〜取引先 往復）",
+     "category": "交通費",
+     "amount": 860,
+     "note": ""
+    },
+    {
+     "name": "地下鉄（市内移動 3 日目）",
+     "category": "交通費",
+     "amount": 460,
+     "note": ""
+    },
+    {
+     "name": "バス（ホテル〜支店 往復）",
+     "category": "交通費",
+     "amount": 440,
+     "note": ""
+    },
+    {
+     "name": "在来線（取引先 2 社の訪問）",
+     "category": "交通費",
+     "amount": 1180,
+     "note": ""
+    },
+    {
+     "name": "タクシー（名古屋駅〜取引先）",
+     "category": "交通費",
+     "amount": 5200,
+     "note": ""
+    }
+   ],
+   "amount": 107520,
+   "purpose": "名古屋地区の新規販売店 4 社との契約前の訪問",
+   "approver_name": "中村 浩",
+   "approver_position": "課長",
+   "attachments": [],
+   "destination": "名古屋市",
+   "depart_date": "2026-11-18",
+   "return_date": "2026-11-20",
+   "nights": 2
+  }
+ },
+ {
+  "id": "V20",
+  "format": "pdf2",
+  "intended": [
+   "R6",
+   "R8"
+  ],
+  "app": {
+   "type": "ringi",
+   "applicant": "岡田 葵",
+   "department": "マーケティング課",
+   "applicant_class": "一般",
+   "apply_date": "2026-11-11",
+   "items": [
+    {
+     "name": "無線キーボード・マウス",
+     "category": "備品",
+     "amount": 9800,
+     "note": ""
+    },
+    {
+     "name": "Web 会議用カメラ",
+     "category": "備品",
+     "amount": 12400,
+     "note": ""
+    },
+    {
+     "name": "会議用スピーカーフォン",
+     "category": "備品",
+     "amount": 38000,
+     "note": ""
+    },
+    {
+     "name": "複合機用トナー一式",
+     "category": "備品",
+     "amount": 46000,
+     "note": ""
+    },
+    {
+     "name": "表計算ソフト 追加ライセンス",
+     "category": "ソフトウェア",
+     "amount": 54000,
+     "note": ""
+    },
+    {
+     "name": "ウイルス対策ソフト 年間更新",
+     "category": "ソフトウェア",
+     "amount": 39600,
+     "note": ""
+    },
+    {
+     "name": "無停電電源装置",
+     "category": "備品",
+     "amount": 42000,
+     "note": ""
+    },
+    {
+     "name": "ネットワークスイッチ",
+     "category": "備品",
+     "amount": 27500,
+     "note": ""
+    },
+    {
+     "name": "外付けハードディスク",
+     "category": "備品",
+     "amount": 16800,
+     "note": ""
+    },
+    {
+     "name": "シュレッダー",
+     "category": "備品",
+     "amount": 58000,
+     "note": ""
+    },
+    {
+     "name": "書類保管庫",
+     "category": "備品",
+     "amount": 74000,
+     "note": ""
+    },
+    {
+     "name": "設置・初期設定の作業費",
+     "category": "業務委託",
+     "amount": 66000,
+     "note": ""
+    },
+    {
+     "name": "展示用什器 一式",
+     "category": "備品",
+     "amount": 337500,
+     "note": ""
+    },
+    {
+     "name": "什器の運搬・設置費",
+     "category": "業務委託",
+     "amount": 149000,
+     "note": ""
+    },
+    {
+     "name": "商品撮影 30 点",
+     "category": "業務委託",
+     "amount": 39400,
+     "note": ""
+    }
+   ],
+   "amount": 1000000,
+   "purpose": "直営ショールームの開設準備",
+   "approver_name": "松本 隆之",
+   "approver_position": "役員",
+   "attachments": [
+    "見積書"
+   ],
+   "subject": "ショールームの開設準備",
+   "quotes_count": 1
+  }
+ }
+]

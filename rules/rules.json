@@ -1,0 +1,42 @@
+{
+  "R1": {
+    "name": "金額上限",
+    "meeting_per_person": 5000,
+    "lodging_per_night": 12000,
+    "articles": {"会議費": "経費規程 第5条第1項", "宿泊費": "出張旅費規程 第6条"}
+  },
+  "R2": {
+    "name": "決裁者",
+    "tiers": [
+      {"under": 100000, "position": "課長"},
+      {"under": 1000000, "position": "部長"},
+      {"under": null, "position": "役員"}
+    ],
+    "ranks": {"課長": 1, "部長": 2, "役員": 3},
+    "article": "決裁権限規程 第4条"
+  },
+  "R3": {
+    "name": "申請期限",
+    "keihi_days_after_pay": 30,
+    "shucchou_days_before_depart": 7,
+    "articles": {"keihi": "経費規程 第8条", "shucchou": "出張旅費規程 第4条"}
+  },
+  "R4": {
+    "name": "必須添付",
+    "keihi_required": "領収書",
+    "ringi_quote_from": 50000,
+    "ringi_required": "見積書",
+    "articles": {"keihi": "経費規程 第7条", "ringi": "決裁権限規程 第6条"}
+  },
+  "R5": {
+    "name": "記入漏れ",
+    "articles": {
+      "purpose": {"keihi": "経費規程 第6条第1項", "shucchou": "出張旅費規程 第3条第1項", "ringi": "決裁権限規程 第5条第1項"},
+      "participants": "経費規程 第5条第2項"
+    }
+  },
+  "R6": {
+    "name": "合計不一致",
+    "articles": {"keihi": "経費規程 第6条第2項", "shucchou": "出張旅費規程 第3条第2項", "ringi": "決裁権限規程 第5条第2項"}
+  }
+}

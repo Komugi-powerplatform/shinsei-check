@@ -1,0 +1,502 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "<CONNECTION_REFERENCE_LOGICAL_NAME>"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "file": {
+                  "title": "file",
+                  "description": "ユーザーが添付した申請書ファイル",
+                  "type": "object",
+                  "x-ms-content-hint": "FILE",
+                  "x-ms-dynamically-added": true,
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "contentBytes": {
+                      "type": "string",
+                      "format": "byte"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "file"
+              ]
+            },
+            "triggerAuthenticationType": "All"
+          }
+        }
+      },
+      "actions": {
+        "Run_prompt": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "recordId": "<AI_BUILDER_PROMPT_ID>",
+              "item/requestv2/Document/base64Encoded": "@triggerBody()?['file']?['contentBytes']"
+            },
+            "host": {
+              "apiId": "providers/Microsoft.ProcessSimple/operationGroups/aibuilder",
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "aibuilderpredict_customprompt"
+            }
+          },
+          "runAfter": {}
+        },
+        "Compose_app": {
+          "type": "Compose",
+          "inputs": "@json(outputs('Run_prompt')?['body/responsev2/predictionOutput/text'])",
+          "runAfter": {
+            "Run_prompt": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Compose_missing_candidates": {
+          "type": "Compose",
+          "inputs": "@createArray(if(not(contains(createArray('keihi', 'shucchou', 'ringi'), coalesce(outputs('Compose_app')?['type'], ''))), '申請種別', null), if(equals(outputs('Compose_app')?['amount'], null), '申請金額', null), if(empty(coalesce(outputs('Compose_app')?['items'], json('[]'))), '明細', null), if(empty(trim(coalesce(outputs('Compose_app')?['apply_date'], ''))), '申請日', null), if(and(equals(coalesce(outputs('Compose_app')?['type'], ''), 'keihi'), empty(trim(coalesce(outputs('Compose_app')?['pay_date'], '')))), '支払日', null), if(and(equals(coalesce(outputs('Compose_app')?['type'], ''), 'shucchou'), empty(trim(coalesce(outputs('Compose_app')?['depart_date'], '')))), '出発日', null))",
+          "runAfter": {
+            "Compose_app": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Filter_missing": {
+          "type": "Query",
+          "inputs": {
+            "from": "@outputs('Compose_missing_candidates')",
+            "where": "@not(equals(item(), null))"
+          },
+          "runAfter": {
+            "Compose_missing_candidates": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_type": {
+          "type": "Compose",
+          "inputs": "@coalesce(outputs('Compose_app')?['type'], '')",
+          "runAfter": {
+            "Filter_missing": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_amount": {
+          "type": "Compose",
+          "inputs": "@coalesce(outputs('Compose_app')?['amount'], 0)",
+          "runAfter": {
+            "V_type": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_total": {
+          "type": "Compose",
+          "inputs": "@xpath(xml(json(concat('{\"r\":{\"i\":', string(coalesce(outputs('Compose_app')?['items'], json('[]'))), '}}'))), 'sum(/r/i/amount)')",
+          "runAfter": {
+            "V_amount": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_meeting": {
+          "type": "Compose",
+          "inputs": "@xpath(xml(json(concat('{\"r\":{\"i\":', string(coalesce(outputs('Compose_app')?['items'], json('[]'))), '}}'))), 'sum(/r/i[category=\"会議費\"]/amount)')",
+          "runAfter": {
+            "V_total": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_lodging": {
+          "type": "Compose",
+          "inputs": "@xpath(xml(json(concat('{\"r\":{\"i\":', string(coalesce(outputs('Compose_app')?['items'], json('[]'))), '}}'))), 'sum(/r/i[category=\"宿泊費\"]/amount)')",
+          "runAfter": {
+            "V_meeting": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_people": {
+          "type": "Compose",
+          "inputs": "@int(concat('0', replace(replace(string(coalesce(outputs('Compose_app')?['participants'], 0)), '名', ''), ' ', '')))",
+          "runAfter": {
+            "V_lodging": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_nights": {
+          "type": "Compose",
+          "inputs": "@int(concat('0', replace(replace(string(coalesce(outputs('Compose_app')?['nights'], 0)), '泊', ''), ' ', '')))",
+          "runAfter": {
+            "V_people": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_need": {
+          "type": "Compose",
+          "inputs": "@if(less(outputs('V_amount'), 100000), 1, if(less(outputs('V_amount'), 1000000), 2, 3))",
+          "runAfter": {
+            "V_nights": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_got": {
+          "type": "Compose",
+          "inputs": "@if(equals(outputs('Compose_app')?['approver_position'], '課長'), 1, if(equals(outputs('Compose_app')?['approver_position'], '部長'), 2, if(equals(outputs('Compose_app')?['approver_position'], '役員'), 3, 0)))",
+          "runAfter": {
+            "V_need": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_days_after_pay": {
+          "type": "Compose",
+          "inputs": "@div(sub(ticks(if(empty(outputs('Compose_app')?['apply_date']), '2000-01-01', outputs('Compose_app')?['apply_date'])), ticks(if(empty(outputs('Compose_app')?['pay_date']), '2000-01-01', outputs('Compose_app')?['pay_date']))), 864000000000)",
+          "runAfter": {
+            "V_got": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_days_before_depart": {
+          "type": "Compose",
+          "inputs": "@div(sub(ticks(if(empty(outputs('Compose_app')?['depart_date']), '2000-01-01', outputs('Compose_app')?['depart_date'])), ticks(if(empty(outputs('Compose_app')?['apply_date']), '2000-01-01', outputs('Compose_app')?['apply_date']))), 864000000000)",
+          "runAfter": {
+            "V_days_after_pay": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_attached": {
+          "type": "Compose",
+          "inputs": "@string(coalesce(outputs('Compose_app')?['attachments'], json('[]')))",
+          "runAfter": {
+            "V_days_before_depart": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_purpose": {
+          "type": "Compose",
+          "inputs": "@trim(coalesce(outputs('Compose_app')?['purpose'], ''))",
+          "runAfter": {
+            "V_attached": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_quotes": {
+          "type": "Compose",
+          "inputs": "@int(concat('0', replace(replace(string(coalesce(outputs('Compose_app')?['quotes_count'], 0)), '社', ''), ' ', '')))",
+          "runAfter": {
+            "V_purpose": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_external": {
+          "type": "Compose",
+          "inputs": "@equals(coalesce(outputs('Compose_app')?['external_participants'], ''), '有')",
+          "runAfter": {
+            "V_quotes": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_meeting_limit": {
+          "type": "Compose",
+          "inputs": "@if(outputs('V_external'), 8000, 5000)",
+          "runAfter": {
+            "V_external": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_metro": {
+          "type": "Compose",
+          "inputs": "@or(contains(coalesce(outputs('Compose_app')?['destination'], ''), '大阪市') , contains(coalesce(outputs('Compose_app')?['destination'], ''), '名古屋市'), and(contains(coalesce(outputs('Compose_app')?['destination'], ''), '東京都'), endsWith(coalesce(outputs('Compose_app')?['destination'], ''), '区')))",
+          "runAfter": {
+            "V_meeting_limit": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_lodging_limit": {
+          "type": "Compose",
+          "inputs": "@add(if(equals(outputs('Compose_app')?['applicant_class'], '管理職'), 15000, 12000), if(outputs('V_metro'), 3000, 0))",
+          "runAfter": {
+            "V_metro": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_per_person": {
+          "type": "Compose",
+          "inputs": "@div(float(outputs('V_meeting')), max(outputs('V_people'), 1))",
+          "runAfter": {
+            "V_lodging_limit": [
+              "Succeeded"
+            ]
+          }
+        },
+        "V_per_night": {
+          "type": "Compose",
+          "inputs": "@div(float(outputs('V_lodging')), max(outputs('V_nights'), 1))",
+          "runAfter": {
+            "V_per_person": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R1_meeting": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'keihi'), greater(outputs('V_meeting'), 0), greater(outputs('V_people'), 0), greater(outputs('V_per_person'), outputs('V_meeting_limit'))), json(concat('{\"rule\":\"R1\",\"article\":\"', if(outputs('V_external'), '経費規程 第5条第2項', '経費規程 第5条第1項'), '\",\"reason\":\"', '会議費が 1 人あたり ', concat(formatNumber(outputs('V_per_person'), '#,0'), '円'), 'で、上限の ', concat(formatNumber(outputs('V_meeting_limit'), '#,0'), '円'), 'を超えています。', '\"}')), null)",
+          "runAfter": {
+            "V_per_night": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R1_lodging": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'shucchou'), greater(outputs('V_lodging'), 0), greater(outputs('V_nights'), 0), greater(outputs('V_per_night'), outputs('V_lodging_limit'))), json(concat('{\"rule\":\"R1\",\"article\":\"', '出張旅費規程 第6条', '\",\"reason\":\"', '宿泊費が 1 泊あたり ', concat(formatNumber(outputs('V_per_night'), '#,0'), '円'), 'で、上限の ', concat(formatNumber(outputs('V_lodging_limit'), '#,0'), '円'), 'を超えています。', '\"}')), null)",
+          "runAfter": {
+            "F_R1_meeting": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R2": {
+          "type": "Compose",
+          "inputs": "@if(less(outputs('V_got'), outputs('V_need')), json(concat('{\"rule\":\"R2\",\"article\":\"', '決裁権限規程 第4条', '\",\"reason\":\"', '申請金額 ', concat(formatNumber(outputs('V_amount'), '#,0'), '円'), 'は', if(equals(outputs('V_need'), 1), '課長', if(equals(outputs('V_need'), 2), '部長', '役員')), 'の決裁が必要ですが、決裁者が', if(empty(outputs('Compose_app')?['approver_position']), '未記入', outputs('Compose_app')?['approver_position']), 'になっています。', '\"}')), null)",
+          "runAfter": {
+            "F_R1_lodging": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R3_keihi": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'keihi'), greater(outputs('V_days_after_pay'), 30)), json(concat('{\"rule\":\"R3\",\"article\":\"', '経費規程 第8条', '\",\"reason\":\"', '支払日から ', string(outputs('V_days_after_pay')), ' 日たっており、申請期限の 30 日を過ぎています。', '\"}')), null)",
+          "runAfter": {
+            "F_R2": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R3_shucchou": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'shucchou'), less(outputs('V_days_before_depart'), 7)), json(concat('{\"rule\":\"R3\",\"article\":\"', '出張旅費規程 第4条', '\",\"reason\":\"', '出発の ', string(outputs('V_days_before_depart')), ' 日前の申請で、期限の 7 日前を過ぎています。', '\"}')), null)",
+          "runAfter": {
+            "F_R3_keihi": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R4_keihi": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'keihi'), not(contains(outputs('V_attached'), '領収書'))), json(concat('{\"rule\":\"R4\",\"article\":\"', '経費規程 第7条', '\",\"reason\":\"', '領収書が添付されていません。', '\"}')), null)",
+          "runAfter": {
+            "F_R3_shucchou": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R4_ringi": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'ringi'), greaterOrEquals(outputs('V_amount'), 50000), not(contains(outputs('V_attached'), '見積書'))), json(concat('{\"rule\":\"R4\",\"article\":\"', '決裁権限規程 第6条第1項', '\",\"reason\":\"', concat(formatNumber(50000, '#,0'), '円'), '以上の稟議に必要な見積書が添付されていません。', '\"}')), null)",
+          "runAfter": {
+            "F_R4_keihi": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R5_purpose": {
+          "type": "Compose",
+          "inputs": "@if(equals(outputs('V_purpose'), ''), json(concat('{\"rule\":\"R5\",\"article\":\"', if(equals(outputs('V_type'), 'keihi'), '経費規程 第6条第1項', if(equals(outputs('V_type'), 'shucchou'), '出張旅費規程 第3条第1項', '決裁権限規程 第5条第1項')), '\",\"reason\":\"', '目的が記入されていません。', '\"}')), null)",
+          "runAfter": {
+            "F_R4_ringi": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R5_people": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'keihi'), greater(outputs('V_meeting'), 0), equals(outputs('V_people'), 0)), json(concat('{\"rule\":\"R5\",\"article\":\"', '経費規程 第5条第3項', '\",\"reason\":\"', '会議費の参加人数が記入されていません。', '\"}')), null)",
+          "runAfter": {
+            "F_R5_purpose": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R6": {
+          "type": "Compose",
+          "inputs": "@if(or(greater(outputs('V_total'), outputs('V_amount')), less(outputs('V_total'), outputs('V_amount'))), json(concat('{\"rule\":\"R6\",\"article\":\"', if(equals(outputs('V_type'), 'keihi'), '経費規程 第6条第2項', if(equals(outputs('V_type'), 'shucchou'), '出張旅費規程 第3条第2項', '決裁権限規程 第5条第2項')), '\",\"reason\":\"', '明細の合計 ', concat(formatNumber(outputs('V_total'), '#,0'), '円'), 'と申請金額 ', concat(formatNumber(outputs('V_amount'), '#,0'), '円'), 'が一致していません。', '\"}')), null)",
+          "runAfter": {
+            "F_R5_people": [
+              "Succeeded"
+            ]
+          }
+        },
+        "F_R8": {
+          "type": "Compose",
+          "inputs": "@if(and(equals(outputs('V_type'), 'ringi'), greaterOrEquals(outputs('V_amount'), 1000000), greater(outputs('V_quotes'), 0), less(outputs('V_quotes'), 2)), json(concat('{\"rule\":\"R8\",\"article\":\"', '決裁権限規程 第6条第2項', '\",\"reason\":\"', concat(formatNumber(1000000, '#,0'), '円'), '以上の稟議には 2 社以上の見積書が必要ですが、', string(outputs('V_quotes')), ' 社分しかありません。', '\"}')), null)",
+          "runAfter": {
+            "F_R6": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Compose_candidates": {
+          "type": "Compose",
+          "inputs": "@createArray(outputs('F_R1_meeting'), outputs('F_R1_lodging'), outputs('F_R2'), outputs('F_R3_keihi'), outputs('F_R3_shucchou'), outputs('F_R4_keihi'), outputs('F_R4_ringi'), outputs('F_R5_purpose'), outputs('F_R5_people'), outputs('F_R6'))",
+          "runAfter": {
+            "F_R8": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Filter_findings": {
+          "type": "Query",
+          "inputs": {
+            "from": "@outputs('Compose_candidates')",
+            "where": "@not(equals(item(), null))"
+          },
+          "runAfter": {
+            "Compose_candidates": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Filter_taxi": {
+          "type": "Query",
+          "inputs": {
+            "from": "@coalesce(outputs('Compose_app')?['items'], json('[]'))",
+            "where": "@and(contains(coalesce(item()?['name'], ''), 'タクシー'), greater(coalesce(item()?['amount'], 0), 5000), equals(trim(coalesce(item()?['note'], '')), ''))"
+          },
+          "runAfter": {
+            "Filter_findings": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Select_taxi": {
+          "type": "Select",
+          "inputs": {
+            "from": "@body('Filter_taxi')",
+            "select": {
+              "rule": "R7",
+              "article": "@{if(equals(outputs('V_type'), 'keihi'), '経費規程 第9条', if(equals(outputs('V_type'), 'shucchou'), '出張旅費規程 第5条第2項', ''))}",
+              "reason": "@{concat('タクシー代 ', formatNumber(item()?['amount'], '#,0'), '円（', item()?['name'], '）は ', formatNumber(5000, '#,0'), '円を超えていますが、備考に理由が記入されていません。')}"
+            }
+          },
+          "runAfter": {
+            "Filter_taxi": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Compose_r8": {
+          "type": "Compose",
+          "inputs": "@if(equals(outputs('F_R8'), null), json('[]'), createArray(outputs('F_R8')))",
+          "runAfter": {
+            "Select_taxi": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Compose_findings": {
+          "type": "Compose",
+          "inputs": "@union(body('Filter_findings'), body('Select_taxi'), outputs('Compose_r8'))",
+          "runAfter": {
+            "Compose_r8": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Compose_result": {
+          "type": "Compose",
+          "inputs": {
+            "status": "@{if(equals(length(body('Filter_missing')), 0), 'checked', 'unreadable')}",
+            "missing": "@body('Filter_missing')",
+            "extracted": "@outputs('Compose_app')",
+            "findings": "@if(equals(length(body('Filter_missing')), 0), outputs('Compose_findings'), json('[]'))"
+          },
+          "runAfter": {
+            "Compose_findings": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Respond": {
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "result": "@{string(outputs('Compose_result'))}"
+            }
+          },
+          "runAfter": {
+            "Compose_result": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Respond_unreadable": {
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "result": "{\"status\":\"unreadable\",\"missing\":[],\"extracted\":null,\"findings\":[]}"
+            }
+          },
+          "runAfter": {
+            "Compose_result": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "schemaVersion": "1.0.0.0"
+}

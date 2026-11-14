@@ -1,0 +1,19 @@
+{
+  "type": "keihi",
+  "applicant": "山田 花子",
+  "department": "経理課",
+  "apply_date": "2026-10-01",
+  "amount": 12000,
+  "items": [{"name": "打合せ昼食", "category": "会議費", "amount": 12000}],
+  "purpose": "取引先との打合せ",
+  "approver_position": "課長",
+  "approver_name": "田中 一郎",
+  "attachments": ["領収書"],
+  "pay_date": "2026-09-28",
+  "participants": 3,
+  "destination": null,
+  "depart_date": null,
+  "return_date": null,
+  "nights": null,
+  "subject": null
+}

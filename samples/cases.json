@@ -1,0 +1,727 @@
+[
+  {
+    "id": "01",
+    "file": "01_keihi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "keihi",
+      "applicant": "佐藤 健二",
+      "department": "営業一課",
+      "apply_date": "2026-11-10",
+      "pay_date": "2026-11-05",
+      "amount": 16000,
+      "items": [
+        {
+          "name": "打合せ昼食（和食店）",
+          "category": "会議費",
+          "amount": 16000
+        }
+      ],
+      "participants": 4,
+      "purpose": "新製品の販促計画について取引先と打合せ",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": [
+        "領収書"
+      ]
+    },
+    "expected": []
+  },
+  {
+    "id": "02",
+    "file": "02_keihi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "keihi",
+      "applicant": "伊藤 美咲",
+      "department": "総務課",
+      "apply_date": "2026-11-06",
+      "pay_date": "2026-10-29",
+      "amount": 5090,
+      "items": [
+        {
+          "name": "コピー用紙 A4 5 箱",
+          "category": "消耗品費",
+          "amount": 3850
+        },
+        {
+          "name": "地下鉄（本社〜倉庫 往復）",
+          "category": "交通費",
+          "amount": 1240
+        }
+      ],
+      "participants": null,
+      "purpose": "倉庫の備品補充と在庫確認",
+      "approver_name": "小林 直子",
+      "approver_position": "課長",
+      "attachments": [
+        "領収書"
+      ]
+    },
+    "expected": []
+  },
+  {
+    "id": "03",
+    "file": "03_shucchou.pdf",
+    "format": "scan",
+    "app": {
+      "type": "shucchou",
+      "applicant": "鈴木 彩",
+      "department": "営業二課",
+      "apply_date": "2026-11-02",
+      "destination": "大阪",
+      "depart_date": "2026-11-12",
+      "return_date": "2026-11-13",
+      "nights": 1,
+      "amount": 39500,
+      "items": [
+        {
+          "name": "新幹線（東京〜新大阪 往復）",
+          "category": "交通費",
+          "amount": 28000
+        },
+        {
+          "name": "ホテル 1 泊",
+          "category": "宿泊費",
+          "amount": 11500
+        }
+      ],
+      "purpose": "関西の販売代理店との年間契約の更新交渉",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": []
+  },
+  {
+    "id": "04",
+    "file": "04_ringi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "ringi",
+      "applicant": "高橋 誠",
+      "department": "情報システム課",
+      "apply_date": "2026-11-04",
+      "subject": "業務用ノート PC の購入",
+      "amount": 298000,
+      "items": [
+        {
+          "name": "ノート PC 2 台",
+          "category": "備品",
+          "amount": 298000
+        }
+      ],
+      "purpose": "12 月入社の社員 2 名に配布する業務用端末の購入",
+      "approver_name": "渡辺 修",
+      "approver_position": "部長",
+      "attachments": [
+        "見積書"
+      ]
+    },
+    "expected": []
+  },
+  {
+    "id": "05",
+    "file": "05_ringi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "ringi",
+      "applicant": "山本 恵",
+      "department": "マーケティング課",
+      "apply_date": "2026-11-05",
+      "subject": "春の文具展示会への出展",
+      "amount": 1200000,
+      "items": [
+        {
+          "name": "出展小間料",
+          "category": "広告",
+          "amount": 880000
+        },
+        {
+          "name": "ブース施工費",
+          "category": "広告",
+          "amount": 320000
+        }
+      ],
+      "purpose": "新製品の認知拡大と販売店の新規開拓",
+      "approver_name": "松本 隆之",
+      "approver_position": "役員",
+      "attachments": [
+        "見積書"
+      ]
+    },
+    "expected": []
+  },
+  {
+    "id": "06",
+    "file": "06_keihi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "keihi",
+      "applicant": "加藤 翔",
+      "department": "営業一課",
+      "apply_date": "2026-11-11",
+      "pay_date": "2026-11-07",
+      "amount": 33000,
+      "items": [
+        {
+          "name": "懇談会食（中華料理店）",
+          "category": "会議費",
+          "amount": 33000
+        }
+      ],
+      "participants": 6,
+      "purpose": "主要取引先との来期の取引条件の打合せ",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": [
+        "領収書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R1",
+        "article": "経費規程 第5条第1項",
+        "reason": "会議費が 1 人あたり 5,500円で、上限の 5,000円を超えています。"
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "file": "07_shucchou.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "shucchou",
+      "applicant": "吉田 大輔",
+      "department": "営業二課",
+      "apply_date": "2026-10-30",
+      "destination": "札幌",
+      "depart_date": "2026-11-10",
+      "return_date": "2026-11-12",
+      "nights": 2,
+      "amount": 73000,
+      "items": [
+        {
+          "name": "航空券（羽田〜新千歳 往復）",
+          "category": "交通費",
+          "amount": 46000
+        },
+        {
+          "name": "ホテル 2 泊",
+          "category": "宿泊費",
+          "amount": 27000
+        }
+      ],
+      "purpose": "北海道地区の販売店向け新製品説明会の開催",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R1",
+        "article": "出張旅費規程 第6条",
+        "reason": "宿泊費が 1 泊あたり 13,500円で、上限の 12,000円を超えています。"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "file": "08_ringi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "ringi",
+      "applicant": "山田 由美",
+      "department": "マーケティング課",
+      "apply_date": "2026-11-06",
+      "subject": "製品カタログの撮影委託",
+      "amount": 180000,
+      "items": [
+        {
+          "name": "カタログ用の商品撮影（40 点）",
+          "category": "業務委託",
+          "amount": 180000
+        }
+      ],
+      "purpose": "2027 年版カタログに載せる商品写真の撮影",
+      "approver_name": "石井 千秋",
+      "approver_position": "課長",
+      "attachments": [
+        "見積書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R2",
+        "article": "決裁権限規程 第4条",
+        "reason": "申請金額 180,000円は部長の決裁が必要ですが、決裁者が課長になっています。"
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "file": "09_shucchou.pdf",
+    "format": "scan",
+    "app": {
+      "type": "shucchou",
+      "applicant": "佐々木 亮",
+      "department": "営業二課",
+      "apply_date": "2026-11-04",
+      "destination": "那覇",
+      "depart_date": "2026-11-17",
+      "return_date": "2026-11-20",
+      "nights": 3,
+      "amount": 104000,
+      "items": [
+        {
+          "name": "航空券（羽田〜那覇 往復）",
+          "category": "交通費",
+          "amount": 68000
+        },
+        {
+          "name": "ホテル 3 泊",
+          "category": "宿泊費",
+          "amount": 36000
+        }
+      ],
+      "purpose": "沖縄地区の新規販売店 3 社との契約前の訪問",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R2",
+        "article": "決裁権限規程 第4条",
+        "reason": "申請金額 104,000円は部長の決裁が必要ですが、決裁者が課長になっています。"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "file": "10_keihi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "keihi",
+      "applicant": "井上 真一",
+      "department": "商品企画課",
+      "apply_date": "2026-11-06",
+      "pay_date": "2026-09-28",
+      "amount": 6600,
+      "items": [
+        {
+          "name": "書籍「文具市場年鑑 2026」",
+          "category": "図書費",
+          "amount": 6600
+        }
+      ],
+      "participants": null,
+      "purpose": "来期の商品企画のための市場調査",
+      "approver_name": "木村 卓郎",
+      "approver_position": "課長",
+      "attachments": [
+        "領収書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R3",
+        "article": "経費規程 第8条",
+        "reason": "支払日から 39 日たっており、申請期限の 30 日を過ぎています。"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "file": "11_shucchou.jpg",
+    "format": "photo",
+    "app": {
+      "type": "shucchou",
+      "applicant": "林 奈々",
+      "department": "商品企画課",
+      "apply_date": "2026-11-10",
+      "destination": "名古屋",
+      "depart_date": "2026-11-13",
+      "return_date": "2026-11-14",
+      "nights": 1,
+      "amount": 31800,
+      "items": [
+        {
+          "name": "新幹線（東京〜名古屋 往復）",
+          "category": "交通費",
+          "amount": 22000
+        },
+        {
+          "name": "ホテル 1 泊",
+          "category": "宿泊費",
+          "amount": 9800
+        }
+      ],
+      "purpose": "協力工場での試作品の確認",
+      "approver_name": "木村 卓郎",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R3",
+        "article": "出張旅費規程 第4条",
+        "reason": "出発の 3 日前の申請で、期限の 7 日前を過ぎています。"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "file": "12_keihi.pdf",
+    "format": "scan",
+    "app": {
+      "type": "keihi",
+      "applicant": "清水 優",
+      "department": "総務課",
+      "apply_date": "2026-11-09",
+      "pay_date": "2026-11-04",
+      "amount": 2480,
+      "items": [
+        {
+          "name": "契約書の郵送（書留 4 通）",
+          "category": "通信費",
+          "amount": 2480
+        }
+      ],
+      "participants": null,
+      "purpose": "取引先 4 社への契約書の発送",
+      "approver_name": "小林 直子",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R4",
+        "article": "経費規程 第7条",
+        "reason": "領収書が添付されていません。"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "file": "13_ringi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "ringi",
+      "applicant": "森 和也",
+      "department": "情報システム課",
+      "apply_date": "2026-11-09",
+      "subject": "情報セキュリティ研修の受講",
+      "amount": 66000,
+      "items": [
+        {
+          "name": "情報セキュリティ研修（2 日間・1 名）",
+          "category": "研修",
+          "amount": 66000
+        }
+      ],
+      "purpose": "社内システムの管理担当者としての知識の習得",
+      "approver_name": "藤田 進",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R4",
+        "article": "決裁権限規程 第6条",
+        "reason": "50,000円以上の稟議に必要な見積書が添付されていません。"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "file": "14_keihi.pdf",
+    "format": "scan",
+    "app": {
+      "type": "keihi",
+      "applicant": "池田 茜",
+      "department": "営業一課",
+      "apply_date": "2026-11-10",
+      "pay_date": "2026-11-06",
+      "amount": 4400,
+      "items": [
+        {
+          "name": "クリアファイル 100 枚",
+          "category": "消耗品費",
+          "amount": 4400
+        }
+      ],
+      "participants": null,
+      "purpose": "",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": [
+        "領収書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R5",
+        "article": "経費規程 第6条第1項",
+        "reason": "目的が記入されていません。"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "file": "15_ringi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "ringi",
+      "applicant": "橋本 哲也",
+      "department": "総務課",
+      "apply_date": "2026-11-05",
+      "subject": "会議室用モニターの購入",
+      "amount": 86000,
+      "items": [
+        {
+          "name": "27 型モニター（第 1 会議室）",
+          "category": "備品",
+          "amount": 32000
+        },
+        {
+          "name": "27 型モニター（第 2 会議室）",
+          "category": "備品",
+          "amount": 32000
+        },
+        {
+          "name": "27 型モニター（応接室）",
+          "category": "備品",
+          "amount": 32000
+        }
+      ],
+      "purpose": "故障した会議室用モニター 3 台の入れ替え",
+      "approver_name": "小林 直子",
+      "approver_position": "課長",
+      "attachments": [
+        "見積書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R6",
+        "article": "決裁権限規程 第5条第2項",
+        "reason": "明細の合計 96,000円と申請金額 86,000円が一致していません。"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "file": "16_keihi.jpg",
+    "format": "photo",
+    "app": {
+      "type": "keihi",
+      "applicant": "阿部 圭",
+      "department": "営業二課",
+      "apply_date": "2026-11-11",
+      "pay_date": "2026-11-10",
+      "amount": 18600,
+      "items": [
+        {
+          "name": "打合せ夕食（寿司店）",
+          "category": "会議費",
+          "amount": 18600
+        }
+      ],
+      "participants": 3,
+      "purpose": "販売代理店との年末キャンペーンの打合せ",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R1",
+        "article": "経費規程 第5条第1項",
+        "reason": "会議費が 1 人あたり 6,200円で、上限の 5,000円を超えています。"
+      },
+      {
+        "rule": "R4",
+        "article": "経費規程 第7条",
+        "reason": "領収書が添付されていません。"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "file": "17_keihi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "keihi",
+      "applicant": "石川 舞",
+      "department": "商品企画課",
+      "apply_date": "2026-11-09",
+      "pay_date": "2026-10-01",
+      "amount": 12000,
+      "items": [
+        {
+          "name": "打合せ昼食（洋食店）",
+          "category": "会議費",
+          "amount": 12000
+        }
+      ],
+      "participants": null,
+      "purpose": "デザイン事務所との新シリーズの打合せ",
+      "approver_name": "木村 卓郎",
+      "approver_position": "課長",
+      "attachments": [
+        "領収書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R3",
+        "article": "経費規程 第8条",
+        "reason": "支払日から 39 日たっており、申請期限の 30 日を過ぎています。"
+      },
+      {
+        "rule": "R5",
+        "article": "経費規程 第5条第2項",
+        "reason": "会議費の参加人数が記入されていません。"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "file": "18_shucchou.pdf",
+    "format": "scan",
+    "app": {
+      "type": "shucchou",
+      "applicant": "前田 光",
+      "department": "営業一課",
+      "apply_date": "2026-11-12",
+      "destination": "広島",
+      "depart_date": "2026-11-16",
+      "return_date": "2026-11-18",
+      "nights": 2,
+      "amount": 65000,
+      "items": [
+        {
+          "name": "新幹線（東京〜広島 往復）",
+          "category": "交通費",
+          "amount": 38000
+        },
+        {
+          "name": "ホテル 2 泊",
+          "category": "宿泊費",
+          "amount": 30000
+        }
+      ],
+      "purpose": "中国地区の販売店会議への出席",
+      "approver_name": "中村 浩",
+      "approver_position": "課長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R1",
+        "article": "出張旅費規程 第6条",
+        "reason": "宿泊費が 1 泊あたり 15,000円で、上限の 12,000円を超えています。"
+      },
+      {
+        "rule": "R3",
+        "article": "出張旅費規程 第4条",
+        "reason": "出発の 4 日前の申請で、期限の 7 日前を過ぎています。"
+      },
+      {
+        "rule": "R6",
+        "article": "出張旅費規程 第3条第2項",
+        "reason": "明細の合計 68,000円と申請金額 65,000円が一致していません。"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "file": "19_ringi.pdf",
+    "format": "pdf",
+    "app": {
+      "type": "ringi",
+      "applicant": "藤井 聡史",
+      "department": "情報システム課",
+      "apply_date": "2026-11-10",
+      "subject": "受発注管理ソフトウェアの導入",
+      "amount": 1480000,
+      "items": [
+        {
+          "name": "受発注管理ソフトウェア（年間ライセンス 20 名）",
+          "category": "ソフトウェア",
+          "amount": 1200000
+        },
+        {
+          "name": "初期設定の作業費",
+          "category": "業務委託",
+          "amount": 280000
+        }
+      ],
+      "purpose": "手作業の受発注処理をなくし、入力ミスを減らす",
+      "approver_name": "渡辺 修",
+      "approver_position": "部長",
+      "attachments": []
+    },
+    "expected": [
+      {
+        "rule": "R2",
+        "article": "決裁権限規程 第4条",
+        "reason": "申請金額 1,480,000円は役員の決裁が必要ですが、決裁者が部長になっています。"
+      },
+      {
+        "rule": "R4",
+        "article": "決裁権限規程 第6条",
+        "reason": "50,000円以上の稟議に必要な見積書が添付されていません。"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "file": "20_ringi.pdf",
+    "format": "scan",
+    "app": {
+      "type": "ringi",
+      "applicant": "岡田 葵",
+      "department": "マーケティング課",
+      "apply_date": "2026-11-11",
+      "subject": "業界誌への広告掲載",
+      "amount": 120000,
+      "items": [
+        {
+          "name": "業界誌 1 月号 広告掲載料",
+          "category": "広告",
+          "amount": 80000
+        },
+        {
+          "name": "広告原稿の制作費",
+          "category": "広告",
+          "amount": 45000
+        }
+      ],
+      "purpose": "",
+      "approver_name": "石井 千秋",
+      "approver_position": "課長",
+      "attachments": [
+        "見積書"
+      ]
+    },
+    "expected": [
+      {
+        "rule": "R2",
+        "article": "決裁権限規程 第4条",
+        "reason": "申請金額 120,000円は部長の決裁が必要ですが、決裁者が課長になっています。"
+      },
+      {
+        "rule": "R5",
+        "article": "決裁権限規程 第5条第1項",
+        "reason": "目的が記入されていません。"
+      },
+      {
+        "rule": "R6",
+        "article": "決裁権限規程 第5条第2項",
+        "reason": "明細の合計 125,000円と申請金額 120,000円が一致していません。"
+      }
+    ]
+  }
+]

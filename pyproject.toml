@@ -1,0 +1,13 @@
+[project]
+name = "shinsei-check"
+version = "0.1.0"
+description = "申請書・稟議の一次チェックエージェント（Copilot Studio × AI Builder）の規程・サンプル・判定エンジン"
+requires-python = ">=3.13"
+dependencies = ["reportlab>=4.4", "pillow>=12"]
+
+[dependency-groups]
+dev = ["pytest>=8", "httpx>=0.27", "azure-identity>=1.17"]  # httpx・azure-identity はフローの作成と答え合わせに使う
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

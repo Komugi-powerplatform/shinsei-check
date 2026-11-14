@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+trash/
+.yomiyasu/
+.ruff_cache/
+# 環境ごとの URL・ID（公開しない）
+config.local.json
+# 作業メモ（手元だけ）
+CLAUDE.md
+tasks/
+# 動かしたときの記録（手元だけ）
+docs/e2e*.md
+docs/chat-a-rerun-19.md
+docs/*.json
+docs/*.log
